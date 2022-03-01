@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className="title">Clutch-e Bag <br/>Coming Soon</h1>
 
         <p className="description">
-          FashionTech Innovation Made in Italy
+          <b>FashionTech Innovation Made in Italy</b>
         </p>
 
         <Image
