@@ -1,40 +1,42 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import mainPicture from '../public/assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic.jpg'
+import logo from '../public/assets/black-and-white-clutch-e-bag-fashion-tech-logo.svg'
 
-export default function Home() {
+const Home = () => {
+    console.log("%cHello devs! Thank you for coming here, please have patience. New website is coming!", "color:blue");
   return (
     <div className="container">
       <Head>
         <title>Clutch-e Bag</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
-        <h1 className="title">Clutch-e Bag <br/>Coming Soon</h1>
-
-        <p className="description">
-          <b>FashionTech Innovation Made in Italy</b>
-        </p>
-
-        <Image
-          src={mainPicture}
-          alt="Homepage clutch-e bag main picture fashion tech made in italy startup"
-        />
-
+          <div className="logo-container">
+              <Image
+                  src={logo}
+                  alt="Homepage clutch-e bag main picture fashion tech made in italy startup"
+              />
+          </div>
+          <h1 className="title">Clutch-e Bag</h1>
+        <h2 className="subtitle">FashionTech Innovation Made in Italy</h2>
+        <h3 className="description">🚧 New website coming soon 🚧<br/>We are working on the new version!</h3>
+          <Image
+              src={mainPicture}
+              alt="Homepage clutch-e bag main picture fashion tech made in italy startup"
+              priority={true}
+          />
         <div className="grid">
           <a href="https://www.forbes.fr/mediasfrance/le-clutch-e-bag-le-sac-intelligent-moderne-et-elegant/" className="card">
             <h3>Forbes &rarr;</h3>
             <p>Read Forbes' article about Clutch-e Bag</p>
           </a>
-
           <a href="https://www.marieclaire.fr/adresses-incontournables/clutch-e-bag-la-pochette-connectee-made-in-italy/" className="card">
             <h3>Marie Claire &rarr;</h3>
             <p>Read Marie Claire's article about Clutch-e Bag</p>
           </a>
         </div>
       </main>
-
       <footer>
         <a
           href="https://www.linkedin.com/company/15798268"
@@ -48,7 +50,7 @@ export default function Home() {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          padding: 5rem 7rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -56,7 +58,6 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -104,6 +105,14 @@ export default function Home() {
           line-height: 1.15;
           font-size: 4rem;
         }
+        
+        .subtitle{
+          font-size: 3rem;
+        }
+        
+        .logo-container{
+          max-width: 15em;
+        }
 
         .title,
         .description {
@@ -112,7 +121,7 @@ export default function Home() {
 
         .description {
           line-height: 1.5;
-          font-size: 1.5rem;
+          font-size: 2rem;
         }
 
         code {
@@ -193,3 +202,4 @@ export default function Home() {
     </div>
   )
 }
+export default Home;
