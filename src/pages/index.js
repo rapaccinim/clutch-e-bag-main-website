@@ -1,16 +1,18 @@
-import Head from 'next/head'
 import Image from 'next/image'
-import mainPicture from '../public/assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic.jpg'
-import logo from '../public/assets/black-and-white-clutch-e-bag-fashion-tech-logo.svg'
+import mainPicture from '../../public/assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic.jpg'
+import logo from '../../public/assets/black-and-white-clutch-e-bag-fashion-tech-logo.svg'
+import HeadSEO from "../components/Head/head";
 
 const Home = () => {
     console.log("%cHello devs! Thank you for coming here, please have patience. New website is coming!", "color:blue");
   return (
     <div className="container">
-      <Head>
-        <title>Clutch-e Bag</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <HeadSEO
+        title={"Clutch-e Bag"}
+        description={"FashionTech innovation Made in Italy"}
+        pageURL={"home"}
+        imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic.jpg"}
+        />
       <main>
           <div className="logo-container">
               <Image
