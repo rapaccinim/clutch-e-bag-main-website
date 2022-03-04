@@ -11,7 +11,7 @@ const Home = () => {
         title={"Clutch-e Bag"}
         description={"FashionTech innovation Made in Italy"}
         pageURL={"home"}
-        imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic.jpg"}
+        imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
         />
       <main>
           <div className="logo-container">
