@@ -7,7 +7,7 @@ List of TODOs for the development of new Clutch-e Bag website.
 [Marco Rapaccini](https://github.com/rapaccinim)
 
 ### Task
-Build the homepage (index.js) with the right styling and elements.
+Build the homepage (`index.js`) with the right styling and elements.
 
 ### Status
 Todo 🔲 (use the _white_check_mark_ icon when done)
@@ -47,10 +47,10 @@ Using `styled-jsx`, the CSS has to be between the following tags:
 Todo 🔲 (use the _white_check_mark_ icon when done)
 
 ## Header component
-To be defined
+It needs resizing according to screen size.
 
 ## Footer component
-To be defined
+It needs HTML tags and styling.
 
 ## About page
 To be defined
