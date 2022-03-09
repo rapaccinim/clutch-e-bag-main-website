@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "/public/assets/black-and-white-clutch-e-bag-fashion-tech-logo.svg";
 import linkedinIcon from "/public/assets/iconmonstr-linkedin-3.svg"
+import instagramIcon from "/public/assets/iconmonstr-instagram-11.svg"
 
 const Header = () => {
     return(
@@ -22,6 +23,18 @@ const Header = () => {
                     </nav>
                 </div>
                 <div className="header-item social-links-container">
+                    <div className="social-links-item">
+                        <a
+                            href="https://www.instagram.com/clutch_ebag/"
+                            alt="Follow Clutch-e Bag on Instagram"
+                            target="_blank"
+                        >
+                            <Image
+                                src={instagramIcon}
+                                alt="Instagram icon clutch-e bag main website innovation fashion tech made in italy startup"
+                            />
+                        </a>
+                    </div>
                     <div className="social-links-item">
                         <a
                             href="https://www.linkedin.com/company/15798268/admin/"
@@ -68,6 +81,7 @@ const Header = () => {
               .social-links-item{
                 display: inherit;
                 cursor: pointer;
+                margin: 0 0 0 1rem;
               }
               .social-links-item a{
                 display: inherit;
