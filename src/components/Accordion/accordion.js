@@ -6,8 +6,8 @@ const Accordion = (props) => {
         <>
             <div className="accordion">
                 {
-                    items && items.map(el => (
-                        <details>
+                    items && items.map((el, index) => (
+                        <details key={index}>
                             <summary>
                                 { el.title }
                                 <div className="marker">
