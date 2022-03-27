@@ -38,6 +38,7 @@ const Carousel = (props) => {
               className="mySlides fade"
               hidden={currentSlide == index ? false : true}
               style={isFull()}
+              key={index}
             >
               <div className="numbertext">
                 {index + 1} / {props.items.length}
@@ -61,6 +62,7 @@ const Carousel = (props) => {
               onClick={() => {
                 setCurrentSlide(index);
               }}
+              key={index}
             ></span>
           ))}
         </div>
