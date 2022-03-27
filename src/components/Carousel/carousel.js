@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 const Carousel = (props) => {
+
+  const { sizeFull } = { ...props };
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const next = () => {
@@ -20,19 +23,26 @@ const Carousel = (props) => {
     setCurrentSlide(current);
   };
 
+  const isFull = () => {
+    if(!sizeFull) return null;
+
+    return {height: '100%'};
+  }
+
   return (
     <>
-      <div className="slideshow">
-        <div className="slideshow-container">
+      <div className="slideshow" style={isFull()}>
+        <div className="slideshow-container" style={isFull()}>
           {props.items.map((el, index) => (
             <div
               className="mySlides fade"
               hidden={currentSlide == index ? false : true}
+              style={isFull()}
             >
               <div className="numbertext">
                 {index + 1} / {props.items.length}
               </div>
-              <img src={el.image} style={{ width: "100%" }} />
+              <img src={el.image} style={ sizeFull == true ? {height: '100%', width: '100%', objectFit: 'cover'} : {width: '100%'} } />
             </div>
           ))}
 
@@ -62,7 +72,7 @@ const Carousel = (props) => {
         }
         
         .slideshow-container {
-          max-width: 1000px;
+          max-width: 100%;
           max-height: 100vh;
           position: relative;
           margin: auto;
