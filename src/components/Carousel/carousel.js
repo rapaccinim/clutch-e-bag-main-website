@@ -73,7 +73,6 @@ const Carousel = (props) => {
         
         .slideshow-container {
           max-width: 100%;
-          max-height: 100vh;
           position: relative;
           margin: auto;
           overflow: hidden;
