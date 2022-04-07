@@ -22,6 +22,7 @@ const Home = () => {
                     </h1>
                 </section>
                 <Image
+                    className="mainPicture"
                     src={mainPicture}
                     alt="Homepage clutch-e bag main picture fashion tech made in italy startup"
                     priority={true}
@@ -57,39 +58,39 @@ const Home = () => {
                 justify-content: center;
                 //align-items: center;
               }
-              
+
               a {
                 color: inherit;
                 text-decoration: none;
               }
-              
+
               .welcome-section{
               align-items: normal;
               }
-              
+
               .homepage-title{
                 margin: 0;
                 line-height: 1.15;
-                font-size: 80px;   
+                font-size: 80px;
               }
-              
+
               .homepage-title-line{
                 display: block;
                 text-align: left;
                 padding: 0 0 0.5rem 0;
               }
-              
+
               .homepage-title-line:first-child{
                 font-size: 120px;
                 margin: 0 0 1rem 0;
                 padding-bottom: 3rem;
                 border-bottom: 2px solid black;
               }
-              
+
               .indent-less{
                 padding-left: 4rem;
               }
-              
+
               .indent-more{
                 padding-left: 8rem;
               }
@@ -133,7 +134,7 @@ const Home = () => {
                 font-size: 1.25rem;
                 line-height: 1.5;
               }
-              
+
               @media (max-width: 600px) {
                 .grid {
                   width: 100%;
