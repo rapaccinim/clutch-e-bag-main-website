@@ -1,26 +1,10 @@
-// use this component to apply a style to all the pages (see pages/_app.js)
 import Header from "../Header/header.js";
-import MobileHeader from "../MobileHeader/mobileHeader.js";
-import Footer from "../Footer/footer";
-import React, {useEffect} from "react";
+import Footer from "../Footer/footer.js";
 
 const Layout = (props) => {
-
-    const [mQuery, setMQuery] = React.useState({
-      matches: globalThis?.window?.innerWidth > 768 ? true : false,
-    })
-
-    useEffect(() => {
-      window.matchMedia("(min-width: 768px)").addListener(setMQuery);
-    });
-
       return (
         <>
-            {process.browser ? (mQuery && !mQuery.matches ?
-                <MobileHeader/>
-             :
-                <Header/>
-            ): null}
+            <Header/>
             <main>{props.children}</main>
             <Footer/>
             <style jsx global>{`
@@ -41,6 +25,5 @@ const Layout = (props) => {
             `}</style>
         </>
       );
-
 }
 export default Layout;

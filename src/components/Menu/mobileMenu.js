@@ -2,22 +2,12 @@ import React from 'react';
 import { animated } from 'react-spring';
 
 const MobileMenu = ({style}) => {
+  const listItems = ['Home', 'Filosofia', 'Clutch-e bag', 'Contatti'];
     return(
       <>
         <animated.div className='menu-container' style={style}>
           <nav className='menu-list'>
-            <p className='menu-list-item'>
-              Home
-            </p>
-            <p className='menu-list-item'>
-              Filosofia
-            </p>
-            <p className='menu-list-item'>
-              Clutch-e bag
-            </p>
-            <p className='menu-list-item'>
-              Contatti
-            </p>
+            {listItems.map((item, i) => <p className='menu-list-item' key={i}>{item}</p>)}
           </nav>
         </animated.div>
         <style jsx>{`
@@ -31,7 +21,6 @@ const MobileMenu = ({style}) => {
               color: #fff;
               cursor: pointer;
             }
-
             .menu-list{
               top: 0;
               height: 92vh;
