@@ -11,6 +11,8 @@ import menuCloser from "/public/assets/mobile-header-menu-closer.svg";
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const menuAnimation = useSpring({
+      position: 'absolute',
+      zIndex: 99,
       transform: menuVisible ? 'translateX(0)' : 'translateX(100%)',
       opacity: menuVisible ? 1 : 0,
     });
@@ -25,7 +27,7 @@ const Header = () => {
                       height="70px"
                   />
               </div>
-              <div className="header-item menu-container mobile">
+              <div className="header-item menu-container mobile icon">
                   <Image
                        src={menuVisible ? menuCloser : menuOpener}
                        alt="Homepage clutch-e bag main logo innovation fashion tech made in italy startup"
@@ -68,11 +70,18 @@ const Header = () => {
                 </div>
               </div>
            </header>
-           <MobileMenu style={menuAnimation}/>
+           <div className="menu-wrapper mobile">
+              <MobileMenu style={menuAnimation}/>
+           </div>
 
            <style jsx global>{
               `html{
                 overflow-y: ${menuVisible ? 'hidden' : 'visible'};
+              }
+              @media (min-width: 768.5px) {
+                html{
+                  overflow-y: visible;
+                }
               }`
             }</style>
             <style jsx>{`
@@ -113,8 +122,10 @@ const Header = () => {
                 display: inherit;
               }
               .mobile{
-                cursor: pointer;
                 display: none;
+              }
+              .icon{
+                cursor: pointer;
               }
 
               @media (max-width: 768px) {

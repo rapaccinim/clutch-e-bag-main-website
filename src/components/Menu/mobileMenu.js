@@ -23,7 +23,7 @@ const MobileMenu = ({style}) => {
             }
             .menu-list{
               top: 0;
-              height: 92vh;
+              height: 100vh;
               width: 100vw;
               margin-bottom: 3rem;
               position: fixed;
