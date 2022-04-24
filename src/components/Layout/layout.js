@@ -1,28 +1,29 @@
-// use this component to apply a style to all the pages (see pages/_app.js)
-import Header from "../Header/header";
-import Footer from "../Footer/footer";
+import Header from "../Header/header.js";
+import Footer from "../Footer/footer.js";
 
 const Layout = (props) => {
-    return (
+      return (
         <>
             <Header/>
             <main>{props.children}</main>
             <Footer/>
             <style jsx global>{`
-              html,
-              body {
+              html, body {
                 padding: 0;
                 margin: 0;
                 font-family: 'Inter', sans-serif;
+                overflow-x: hidden;
               }
+
               * {
                 box-sizing: border-box;
               }
+
               .accent-title{
                 font-family: 'Antic Didone', serif;
               }
             `}</style>
         </>
-    )
+      );
 }
 export default Layout;
