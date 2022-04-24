@@ -5,19 +5,13 @@ import React, {useState} from "react";
 import menuCloser from "../../../public/assets/mobile-header-menu-closer.svg";
 import menuOpener from "../../../public/assets/mobile-header-menu-opener.svg";
 
-const MobileHeader = () => {
+const MobileHeader = ({menuItems}) => {
 
     const [menuVisible, setMenuVisible] = useState(false);
 
     const handleMenuClick = () => {
         setMenuVisible(!menuVisible);
     }
-
-    const menuItems = [
-        { itemName:"About", itemLink: "about" },
-        { itemName:"Icon Bag", itemLink: "icon-bag" },
-        { itemName:"Contact", itemLink: "contact" },
-    ]
 
     return (
         <>
@@ -56,12 +50,11 @@ const MobileHeader = () => {
                     </nav>
                 </div>
             }
-            <style jsx global>{
-                `html{
+            <style jsx global>{`
+              html{
                 overflow-y: ${menuVisible ? 'hidden' : 'visible'};
-              }
-              }`
-            }</style>
+              }  
+            `}</style>
             <style jsx>{`
               .mobile-header-container{
                     display: flex;

@@ -25,6 +25,11 @@ const Layout = (props) => {
               .accent-title{
                 font-family: 'Antic Didone', serif;
               }
+              @media (max-width: 768px) {  
+                main{
+                  padding: 3rem 2rem;
+                }
+              }
             `}</style>
         </>
       );
