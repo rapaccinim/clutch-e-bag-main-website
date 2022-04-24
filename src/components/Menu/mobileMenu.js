@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 import { animated } from 'react-spring';
+import Link from "next/link";
 
-const MobileMenu = ({style}) => {
-  const listItems = ['Home', 'Filosofia', 'Clutch-e bag', 'Contatti'];
+const MobileMenu = ({style, menuItems}) => {
     return(
       <>
         <animated.div className='menu-container' style={style}>
           <nav className='menu-list'>
-            {listItems.map((item, i) => <p className='menu-list-item' key={i}>{item}</p>)}
+            {menuItems.map((item, i) => <Link href={"/" + item.itemLink} key={i}><p className='menu-list-item'>{item.itemName}</p></Link>)}
           </nav>
         </animated.div>
         <style jsx>{`

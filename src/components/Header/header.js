@@ -1,12 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import MobileMenu from "../Menu/mobileMenu.js";
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { useSpring } from 'react-spring';
 import logo from "/public/assets/black-and-white-clutch-e-bag-fashion-tech-logo.svg";
 import linkedinIcon from "/public/assets/iconmonstr-linkedin-3.svg";
 import instagramIcon from "/public/assets/iconmonstr-instagram-11.svg";
 import menuOpener from "/public/assets/mobile-header-menu-opener.svg";
 import menuCloser from "/public/assets/mobile-header-menu-closer.svg";
+import MainMenu from "../Menu/mainMenu";
 
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -16,17 +18,24 @@ const Header = () => {
       transform: menuVisible ? 'translateX(0)' : 'translateX(100%)',
       opacity: menuVisible ? 1 : 0,
     });
+    const menuItems = [
+        { itemName:"About", itemLink: "about" },
+        { itemName:"Icon Bag", itemLink: "icon-bag" },
+        { itemName:"Contact", itemLink: "contact" },
+    ]
     return (
         <>
             <header>
-              <div className="header-item logo-container">
-                  <Image
-                      src={logo}
-                      alt="Homepage clutch-e bag main logo innovation fashion tech made in italy startup"
-                      width="70px"
-                      height="70px"
-                  />
-              </div>
+                <Link href="/">
+                    <div className="header-item logo-container">
+                        <Image
+                            src={logo}
+                            alt="Homepage clutch-e bag main logo innovation fashion tech made in italy startup"
+                            width="70px"
+                            height="70px"
+                        />
+                    </div>
+                </Link>
               <div className="header-item menu-container mobile icon">
                   <Image
                        src={menuVisible ? menuCloser : menuOpener}
@@ -37,17 +46,13 @@ const Header = () => {
                   />
               </div>
               <div className="header-item main-menu-container default">
-                  <nav className="main-menu">
-                      <div className="main-menu-item">About</div>
-                      <div className="main-menu-item">Icon Bag</div>
-                      <div className="main-menu-item">Contact</div>
-                 </nav>
+                <MainMenu menuItems={menuItems}/>
               </div>
               <div className="header-item social-links-container default">
                 <div className="social-links-item">
                      <a
                          href="https://www.instagram.com/clutch_ebag/"
-                         alt="Follow Clutch-e Bag on Instagram"
+                         title="Follow Clutch-e Bag on Instagram"
                          target="_blank"
                      >
                          <Image
@@ -59,7 +64,7 @@ const Header = () => {
                 <div className="social-links-item">
                     <a
                        href="https://www.linkedin.com/company/15798268/admin/"
-                       alt="Follow Clutch-e Bag on LinkedIn"
+                       title="Follow Clutch-e Bag on LinkedIn"
                        target="_blank"
                     >
                          <Image
@@ -71,7 +76,7 @@ const Header = () => {
               </div>
            </header>
            <div className="menu-wrapper mobile">
-              <MobileMenu style={menuAnimation}/>
+              <MobileMenu style={menuAnimation} menuItems={menuItems}/>
            </div>
 
            <style jsx global>{
