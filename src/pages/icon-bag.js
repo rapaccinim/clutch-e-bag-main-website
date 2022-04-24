@@ -1,7 +1,7 @@
 import Accordion from "../components/Accordion/accordion";
 import Carousel from "../components/Carousel/carousel";
 
-const Product = () => {
+const IconBag = () => {
     return (
         <div className="container-fluid">
             <section className="flex hero-section">
@@ -129,7 +129,7 @@ const Product = () => {
                     max-width: 100%;
                 }
                 h1, h2, h3, h4, h5, h6 {
-                    font-family: 'Antic Didone';
+                    font-family: 'Antic Didone', sans-serif;
                 }
                 h1 {
                     font-size: 70px;
@@ -142,7 +142,7 @@ const Product = () => {
                 }
                 p {
                     font-size: 16px;
-                    font-family: 'Inter';
+                    font-family: 'Inter', sans-serif;
                     font-weight: 300;
                     line-height: 26px;
                 }
@@ -193,4 +193,4 @@ const Product = () => {
         </div>
     )
 }
-export default Product
+export default IconBag

@@ -17,7 +17,7 @@ Todo 🔲 (use the _white_check_mark_ icon when done)
 [Marco Peretto](https://github.com/mperetto)
 
 ### Task
-Add HTML tags and CSS necessary for building `product.js` page.
+Add HTML tags and CSS necessary for building `icon-bag.js` page.
 
 Using `styled-jsx`, the CSS has to be between the following tags:
 ```
