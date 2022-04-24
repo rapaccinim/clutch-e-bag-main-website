@@ -12,7 +12,6 @@ const Home = () => {
                 pageURL={"home"}
                 imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
             />
-            <main>
                 <section className="welcome-section">
                     <h1 className="homepage-title">
                         <span className="homepage-title-line accent-title">Clutch-e Bag</span>
@@ -39,24 +38,12 @@ const Home = () => {
                         <p>Read Marie Claire's article about Clutch-e Bag</p>
                     </a>
                 </div>
-            </main>
-
             <style jsx>{`
               .container {
-                min-height: 100vh;
-                padding: 3rem 7rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-              }
-
-              main {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                //align-items: center;
               }
 
               a {

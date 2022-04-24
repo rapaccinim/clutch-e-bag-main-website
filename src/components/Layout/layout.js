@@ -14,11 +14,14 @@ const Layout = (props) => {
                 font-family: 'Inter', sans-serif;
                 overflow-x: hidden;
               }
-
               * {
                 box-sizing: border-box;
               }
-
+              main{
+                min-height: 100vh;
+                padding: 3rem 7rem;
+                display: flex;
+              }
               .accent-title{
                 font-family: 'Antic Didone', serif;
               }
