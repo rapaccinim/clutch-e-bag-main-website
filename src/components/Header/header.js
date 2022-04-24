@@ -75,10 +75,11 @@ const Header = () => {
                 </div>
               </div>
            </header>
-           <div className="menu-wrapper mobile">
-              <MobileMenu style={menuAnimation} menuItems={menuItems}/>
-           </div>
-
+            {menuVisible &&
+                <div className="menu-wrapper mobile">
+                    <MobileMenu style={menuAnimation} menuItems={menuItems}/>
+                </div>
+            }
            <style jsx global>{
               `html{
                 overflow-y: ${menuVisible ? 'hidden' : 'visible'};
