@@ -24,9 +24,9 @@ const Header = () => {
     }, []);
 
     const menuItems = [
+        { itemName:"Home", itemLink: "" },
         { itemName:"About", itemLink: "about" },
-        { itemName:"Icon Bag", itemLink: "icon-bag" },
-        { itemName:"Contact", itemLink: "contact" },
+        { itemName:"Contact", itemLink: "contact" }
     ]
 
     return (

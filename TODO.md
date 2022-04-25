@@ -7,7 +7,7 @@ List of TODOs for the development of new Clutch-e Bag website.
 [Marco Rapaccini](https://github.com/rapaccinim)
 
 ### Task
-Build the homepage (`index.js`) with the right styling and elements.
+Build the homepage (`old-index.js`) with the right styling and elements.
 
 ### Status
 Todo 🔲 (use the _white_check_mark_ icon when done)
