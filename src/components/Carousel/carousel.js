@@ -43,7 +43,7 @@ const Carousel = (props) => {
               <div className="numbertext">
                 {index + 1} / {props.items.length}
               </div>
-              <img src={el.image} style={ sizeFull == true ? {height: '100%', width: '100%', objectFit: 'cover'} : {width: '100%'} } />
+              <img src={el.image.src} alt={el.altText} style={ sizeFull == true ? {height: '100%', width: '100%', objectFit: 'cover'} : {width: '100%'} } />
             </div>
           ))}
 
@@ -63,7 +63,7 @@ const Carousel = (props) => {
                 setCurrentSlide(index);
               }}
               key={index}
-            ></span>
+            />
           ))}
         </div>
       </div>

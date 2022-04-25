@@ -65,7 +65,7 @@ const Header = () => {
                             </div>
                             <div className="social-links-item">
                                 <a
-                                    href="https://www.linkedin.com/company/15798268/admin/"
+                                    href="https://www.linkedin.com/company/clutchebag"
                                     title="Follow Clutch-e Bag on LinkedIn"
                                     target="_blank"
                                 >

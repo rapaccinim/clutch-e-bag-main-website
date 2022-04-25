@@ -1,5 +1,17 @@
 import Accordion from "../components/Accordion/accordion";
 import Carousel from "../components/Carousel/carousel";
+import firstPic from "/public/assets/carousel/clutch-e-bag-fashion-tech-made-in-italy-1st.jpg"
+import secondPic from "/public/assets/carousel/clutch-e-bag-fashion-tech-made-in-italy-2nd.jpg"
+import sidePinkPic from "/public/assets/carousel/clutch-e-bag-fashion-tech-made-in-italy-side-pink.jpg"
+import frontBluePic from "/public/assets/carousel/clutch-e-bag-fashion-tech-made-in-italy-front-blue.jpg"
+import sideWhitePic from "/public/assets/carousel/clutch-e-bag-fashion-tech-made-in-italy-side-white.jpg"
+import frontBlackPic from "/public/assets/carousel/clutch-e-bag-fashion-tech-made-in-italy-front-black.jpg"
+import fingerPrintPic from "/public/assets/more-info-pics/clutch-e-bag-fashion-tech-made-in-italy-technology-finger-print.jpg"
+import technologyPic from "/public/assets/more-info-pics/clutch-e-bag-fashion-tech-made-in-italy-technology-connected.jpg"
+import genuineLeatherPic from "/public/assets/more-info-pics/clutch-e-bag-fashion-tech-made-in-italy-technology-genuine-leather.jpg"
+import fingerPrintIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-finger-print-scanner-icon.svg"
+import technologyIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-technology.svg"
+import genuineLeatherIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-leather.svg"
 
 const IconBag = () => {
     return (
@@ -10,16 +22,28 @@ const IconBag = () => {
                         sizeFull={true}
                         items={[
                         {
-                            image:
-                            "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                            image: firstPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 1`
                         },
                         {
-                            image:
-                            "https://images.unsplash.com/photo-1605733513597-a8f8341084e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1229&q=80"
+                            image: secondPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 2`
                         },
                         {
-                            image:
-                            "https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80"
+                            image: sidePinkPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 3`
+                        },
+                        {
+                            image: frontBluePic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 4`
+                        },
+                        {
+                            image: sideWhitePic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 5`
+                        },
+                        {
+                            image: frontBlackPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 6`
                         }
                         ]}
                     />
@@ -27,80 +51,115 @@ const IconBag = () => {
                 <div className="hero-section__description flex flex-col flex-basis-50">
                     <h1 className="">Clutch-e bag</h1>
                     <p>
-                      The first Smart Fashion Tech pochette in the world.
-                      The objective is that of bringing a new idea of handbag.
+                        The first Smart Fashion Tech pochette in the world.
                     </p>
                     <p>
-                      Clutch-e Bag is equipped with fingerprint scanner for the opening, GPS tracking system, speaker to make it ring and find it easily everytime everywhere, removable power bank with external magnetic port.
+                        Our objective is that of bringing a new idea of handbag.
                     </p>
-                    <a href="#">full features</a>
+                    <p>
+                        Clutch-e Bag is equipped with fingerprint scanner for the opening, GPS tracking system, speaker to make it ring and find it easily everytime everywhere, removable power bank with external magnetic port.
+                    </p>
+                    <a href="#discover-more" className="anchor-link">Discover More</a>
                 </div>
                 
             </section>
 
-            <section className="features">
-                <h2 className="text-center py-5">Full Features</h2>
+            <section className="features" id="discover-more">
+                <h2 className="text-center py-5">More about Clutch-e</h2>
                 <div className="features__icons flex justify-content-evenly">
                     <div className="flex flex-col align-items-center">
-                        <img src="https://cdn-icons-png.flaticon.com/512/253/253298.png" alt="Feature Icon" className="icon" />
-                        <p>icona feature</p>
+                        <img src={fingerPrintIcon.src} alt="Clutch-e Bag Finger Print Scanner Icon" className="icon" />
+                        <p>Finger Print Scanner</p>
                     </div>
                     <div className="flex flex-col align-items-center">
-                        <img src="https://cdn-icons-png.flaticon.com/512/253/253298.png" alt="Feature Icon" className="icon" />
-                        <p>icona feature</p>
+                        <img src={technologyIcon.src} alt="Clutch-e Bag Technology Icon" className="icon" />
+                        <p>Technology</p>
                     </div>
                     <div className="flex flex-col align-items-center">
-                        <img src="https://cdn-icons-png.flaticon.com/512/253/253298.png" alt="Feature Icon" className="icon" />
-                        <p>icona feature</p>
+                        <img src={genuineLeatherIcon.src} alt="Clutch-e Bag Genuine Leather Icon" className="icon" />
+                        <p>Design</p>
                     </div>
                 </div>
                 <div className="feature__card py-5 flex">
                     <div className="feature__description flex-basis-50 py-2 px-5">
-                        <h3>Feature 1</h3>
+                        <h3>Finger Print Scanner</h3>
                         <div className="pl-3">
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu aliquet tellus a sit nec nec scelerisque. Commodo, at feugiat ac facilisis quis mauris, nulla. Faucibus nibh commodo gravida vel enim. 
+                                Clutch-e Bag comes with the <b>next level security concept</b>, in fact you can open the pochette with your fingerprint.
                             </p>
+                            <p>
+                                No one else will be able to do that.
+                            </p>
+                            <p>
+                                If you prefer, you can choose to open Clutch-e Bag via your smartphone using our dedicated mobile app.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="feature__image flex-basis-50">
+                        <img src={fingerPrintPic.src} alt="clutch-e bag fashion tech finger print scanner" className="img-fluid" />
+                    </div>
+                </div>
+                <div className="feature__card py-5 flex">
+                    <div className="feature__description flex-basis-50 py-2 px-5">
+                        <h3>Technology</h3>
+                        <div className="pl-3">
+                            <p>
+                                Your Clutch-e is <b>always connected</b> to your smartphone.</p>
                             <Accordion 
                                 items={[
                                     {
-                                        title: 'Materiale',
-                                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque magna in est consequat id nibh. Elit ornare quisque volutpat amet. Id phasellus at aenean egestas nulla.'
+                                        title: 'Smartphone App',
+                                        description: `Thanks to our mobile app you can check the charge status, track it via GPS or remotely open it. Clutch-e will also send you alerts if you leave it behind.`
                                     },
                                     {
-                                        title: 'Dimensioni',
-                                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque magna in est consequat id nibh. Elit ornare quisque volutpat amet. Id phasellus at aenean egestas nulla.'
+                                        title: 'Power Bank',
+                                        description: `A removable power bank with magnetic pogo connector allows you to keep your smartphone charged during the day. You won't need to keep your bag open in order to recharge your smartphone.`
                                     },
                                     {
-                                        title: 'Lorem Ipsum',
-                                        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque magna in est consequat id nibh. Elit ornare quisque volutpat amet. Id phasellus at aenean egestas nulla.'
+                                        title: 'RFID Blocking',
+                                        description: `The RFID Blocking System protects your credit cards and passport from contactless payments and scans.`
                                     }
                                 ]}
                             />
                         </div>
                     </div>
                     <div className="feature__image flex-basis-50">
-                        <img src="https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" alt="" className="img-fluid" />
+                        <img src={technologyPic.src} alt="clutch-e bag fashion tech technology smartphone app power bank rfid blocking" className="img-fluid" />
                     </div>
-                    
                 </div>
                 <div className="feature__card py-5 flex">
                     <div className="feature__description flex-basis-50 py-2 px-5">
-                        <h3>Feature 2</h3>
+                        <h3>Design</h3>
                         <div className="pl-3">
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu aliquet tellus a sit nec nec scelerisque. Commodo, at feugiat ac facilisis quis mauris, nulla. Faucibus nibh commodo gravida vel enim. 
+                                We know that <b>design</b> and <b>quality</b> mean a lot to you.
                             </p>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu aliquet tellus a sit nec nec scelerisque. Commodo, at feugiat ac facilisis quis mauris, nulla. Faucibus nibh commodo gravida vel enim. 
+                                That's why every Clutch-e is <b>highly detailed</b>.
                             </p>
+                            <Accordion
+                                items={[
+                                    {
+                                        title: `Craftsmanship`,
+                                        description: `Clutch-e Bag is designed and manufactured in Italy, combining the modern techniques and the experience of master craftsmen of Florence.`
+                                    },
+                                    {
+                                        title: `Materials`,
+                                        description: `Clutch-e Bag is manufactured using high-quality materials such as Premium calfskin, lambskin, satin, 24K gold plated frame and highly resistant plastic polymers.`
+                                    },
+                                    {
+                                        title: `Stay Organised`,
+                                        description: `Clutch-e Bag provides you with different pockets to help keeping all your belongings organised`
+                                    }
+                                ]}
+                            />
                         </div>
                     </div>
                     <div className="feature__image flex-basis-50">
-                        <img src="https://images.unsplash.com/photo-1523779105320-d1cd346ff52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" alt="" className="img-fluid" />
+                        <img src={genuineLeatherPic.src} alt="clutch-e bag fashion tech design" className="img-fluid" />
                     </div>
-                    
                 </div>
+
             </section>
             
             <style jsx>{`
@@ -139,6 +198,7 @@ const IconBag = () => {
                 }
                 h3 {
                     font-size: 30px;
+                    padding: 0 3rem;
                 }
                 p {
                     font-size: 16px;
@@ -171,6 +231,11 @@ const IconBag = () => {
                 }
                 .text-center {
                     text-align: center;
+                }
+                .anchor-link{
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: #000000;
                 }
                 @media screen and (max-width: 992px) {
                     .feature__description {
