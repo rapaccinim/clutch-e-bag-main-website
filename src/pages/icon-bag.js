@@ -12,47 +12,39 @@ import genuineLeatherPic from "/public/assets/more-info-pics/clutch-e-bag-fashio
 import fingerPrintIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-finger-print-scanner-icon.svg"
 import technologyIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-technology.svg"
 import genuineLeatherIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-leather.svg"
-import HeadSEO from "../components/Head/head";
 
-const Home = () => {
+const IconBag = () => {
     return (
-        <>
-            <HeadSEO
-                title={"Clutch-e Bag"}
-                description={"FashionTech innovation Made in Italy"}
-                pageURL={"home"}
-                imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
-            />
         <div className="container-fluid">
             <section className="flex hero-section">
                 <div className="flex-basis-50">
                     <Carousel
                         sizeFull={true}
                         items={[
-                            {
-                                image: firstPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 1`
-                            },
-                            {
-                                image: secondPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 2`
-                            },
-                            {
-                                image: sidePinkPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 3`
-                            },
-                            {
-                                image: frontBluePic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 4`
-                            },
-                            {
-                                image: sideWhitePic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 5`
-                            },
-                            {
-                                image: frontBlackPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 6`
-                            }
+                        {
+                            image: firstPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 1`
+                        },
+                        {
+                            image: secondPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 2`
+                        },
+                        {
+                            image: sidePinkPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 3`
+                        },
+                        {
+                            image: frontBluePic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 4`
+                        },
+                        {
+                            image: sideWhitePic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 5`
+                        },
+                        {
+                            image: frontBlackPic,
+                            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 6`
+                        }
                         ]}
                     />
                 </div>
@@ -69,7 +61,7 @@ const Home = () => {
                     </p>
                     <a href="#discover-more" className="anchor-link">Discover More</a>
                 </div>
-
+                
             </section>
 
             <section className="features" id="discover-more">
@@ -113,7 +105,7 @@ const Home = () => {
                         <div className="pl-3">
                             <p>
                                 Your Clutch-e is <b>always connected</b> to your smartphone.</p>
-                            <Accordion
+                            <Accordion 
                                 items={[
                                     {
                                         title: 'Smartphone App',
@@ -169,7 +161,7 @@ const Home = () => {
                 </div>
 
             </section>
-
+            
             <style jsx>{`
                 .container-fluid {
                   width: 100%;
@@ -264,7 +256,6 @@ const Home = () => {
                 
             `}</style>
         </div>
-        </>
     )
 }
-export default Home
+export default IconBag
