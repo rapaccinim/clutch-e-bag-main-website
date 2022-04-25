@@ -57,7 +57,7 @@ const Home = () => {
                     />
                 </div>
                 <div className="hero-section__description flex flex-col flex-basis-50">
-                    <h1 className="">Clutch-e bag</h1>
+                    <h1 className="">Clutch-e Bag</h1>
                     <p>
                         The first Smart Fashion Tech pochette in the world.
                     </p>
@@ -247,13 +247,26 @@ const Home = () => {
                 }
                 @media screen and (max-width: 992px) {
                     .feature__description {
-                        padding: 0 2rem;
+                        padding: 0;
                     }
                 }
                 @media screen and (max-width: 768px) {
+                h3 {
+                    padding: 0;
+                }
+                 .pl-3 {
+                    padding: 0 0;
+                }
+                .py-5 {
+                    padding: 1rem 0;
+                }
                   .hero-section {
                     flex-direction: column;
                   }
+                  .hero-section__description {
+                    padding: 2rem 0;
+                    align-items: start;
+                }
                   .feature__card {
                       flex-direction: column;
                   }
