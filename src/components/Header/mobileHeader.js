@@ -51,9 +51,9 @@ const MobileHeader = ({menuItems}) => {
                 </div>
             }
             <style jsx global>{`
-              html{
-                overflow-y: ${menuVisible ? 'hidden' : 'visible'};
-              }  
+              body{
+                position: ${menuVisible ? 'fixed' : 'static'};
+              } 
             `}</style>
             <style jsx>{`
               .mobile-header-container{
