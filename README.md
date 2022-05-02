@@ -18,6 +18,10 @@ We use Vercel's _CSS-in-JS_ approach with `styled-jsx`. Read [here](https://next
 * use the `dev` branch for development purposes
 * **do not use** the `main` branch, it's for production deploys only!
 
+## Dependencies
+* [`@sendgrid/mail`](https://yarnpkg.com/package/@sendgrid/mail) for sending emails through the contact form
+* [`nanoid`](https://yarnpkg.com/package/nanoid) for generating unique IDs
+
 ## Figma layout
 Figma design is [here](https://www.figma.com/file/pzKV1wonWDrhdZBNQ84JET/Clutch-e-bag-Wireframe?node-id=1%3A2).
 
