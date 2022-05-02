@@ -143,13 +143,9 @@ const Contact = () => {
                 }
             </div>
             <style jsx>{`
-
               .container{
                 margin: 0 auto;
                 max-width: 680px;
-              }
-              h1{
-                font-size: 70px;
               }
               form{
                 width: 100%;
@@ -184,11 +180,6 @@ const Contact = () => {
                 padding: 20px;
                 margin: 10px 0;
                 border: 3px solid ${statusInfo.type === "error" ? '#d72700' : '#008000'}
-              }
-              @media (max-width: 768px) {  
-                h1{
-                  font-size: 50px;
-                }
               }
             `}</style>
         </>

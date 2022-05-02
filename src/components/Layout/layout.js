@@ -13,6 +13,7 @@ const Layout = (props) => {
                 margin: 0;
                 font-family: 'Inter', sans-serif;
                 overflow-x: hidden;
+                max-width: 1920px;
               }
               * {
                 box-sizing: border-box;
@@ -22,12 +23,18 @@ const Layout = (props) => {
                 padding: 3rem 7rem;
                 display: flex;
               }
-              .accent-title{
+              h1{
+                font-size: 70px;
+              }
+              h1, .accent-title{
                 font-family: 'Antic Didone', serif;
               }
               @media (max-width: 768px) {  
                 main{
                   padding: 3rem 2rem;
+                }
+                h1 {
+                  font-size: 50px;
                 }
               }
             `}</style>
