@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid'
+
 const CustomSection = ({iconSrc, altIconText, content}) => {
     return(
         <>
@@ -5,7 +7,7 @@ const CustomSection = ({iconSrc, altIconText, content}) => {
                 <div className="icon-container">
                     <img src={iconSrc.src} alt={altIconText} className="icon-img" />
                 </div>
-                <div>{content.map( (paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
+                <div>{content.map( paragraph => <p key={nanoid()}>{paragraph}</p>)}</div>
             </div>
             <style jsx>{`
               .custom-section {

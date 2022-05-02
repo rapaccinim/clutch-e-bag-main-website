@@ -2,6 +2,7 @@ import visionBeautyIcon from "/public/assets/philosophy-pics/clutch-e-bag-fashio
 import innovationChangeIcon from "/public/assets/philosophy-pics/clutch-e-bag-fashion-tech-made-in-italy-philosophy-innovation-change-icon.svg"
 import productQualityIcon from "/public/assets/philosophy-pics/clutch-e-bag-fashion-tech-made-in-italy-philosophy-quality-product-icon.svg"
 import CustomSection from "../components/PhilosophyComponents/CustomSection";
+import { nanoid } from 'nanoid'
 
 const Philosophy = () => {
 
@@ -40,7 +41,7 @@ const Philosophy = () => {
             <div className="container">
                 <h1>Philosophy</h1>
                 {philosophyContent.map(item =>
-                    <CustomSection iconSrc={item.iconSrc} altIconText={item.altIconText} content={item.content} key={item.altIconText} />
+                    <CustomSection iconSrc={item.iconSrc} altIconText={item.altIconText} content={item.content} key={nanoid()} />
                 )}
             </div>
             <style jsx>{`
