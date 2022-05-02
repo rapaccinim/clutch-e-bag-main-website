@@ -51,9 +51,16 @@ const MobileHeader = ({menuItems}) => {
                 </div>
             }
             <style jsx global>{`
-              body{
-                position: ${menuVisible ? 'fixed' : 'static'};
-              } 
+            //https://stackoverflow.com/questions/3047337/does-overflowhidden-applied-to-body-work-on-iphone-safari
+            html, body{
+              position: ${menuVisible ? 'relative' : 'static'};
+              overflow-y: ${menuVisible ? 'hidden' : 'visible'};
+              height: 100%;
+            }
+            body{
+              touch-action: ${menuVisible ? 'none' : 'auto'};
+              -ms-touch-action: ${menuVisible ? 'none' : 'auto'};
+            }
             `}</style>
             <style jsx>{`
               .mobile-header-container{
