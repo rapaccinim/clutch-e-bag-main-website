@@ -4,38 +4,36 @@ import productQualityIcon from "/public/assets/philosophy-pics/clutch-e-bag-fash
 import CustomSection from "../components/PhilosophyComponents/CustomSection";
 import { nanoid } from 'nanoid'
 
+const philosophyContent = [
+    {
+        iconSrc: visionBeautyIcon,
+        altIconText: "Clutch-e Bag Philosophy Vision Beauty Icon",
+        content: [
+            `Our vision originates from the willingness to create a product that could introduce a revolution in the world of fashion by mixing elegance and technology.`,
+            `Beauty is in the right balance between tradition and innovation, craftsmanship and technology.`,
+            `We could obtain an extraordinary product only combining them perfectly.`
+        ]
+    },
+    {
+        iconSrc: innovationChangeIcon,
+        altIconText: "Clutch-e Bag Philosophy Innovation Change Icon",
+        content: [
+            `Innovation means to change.`,
+            `We strongly believe in a continuous metamorphosis of what surrounds us.`,
+            `We are deeply bound by our traditions though we turn our gaze to the future.`
+        ]
+    },
+    {
+        iconSrc: productQualityIcon,
+        altIconText: "Clutch-e Bag Philosophy Product Quality Icon",
+        content: [
+            `Our quality lies not only in the materials but also in the whole manufacturing process, in order to take care of every detail of our bags.`,
+            `Excellent products can be created only by the combination of masters craftsmen and the modern manufacturing techniques.`
+        ]
+    }
+];
+
 const Philosophy = () => {
-
-    const philosophyContent = [
-        {
-            iconSrc: visionBeautyIcon,
-            altIconText: "Clutch-e Bag Philosophy Vision Beauty Icon",
-            content: [
-                `Our vision originates from the willingness to create a product that could introduce a revolution in the world of fashion by mixing elegance and technology.`,
-                `Beauty is in the right balance between tradition and innovation, craftsmanship and technology.`,
-                `We could obtain an extraordinary product only combining them perfectly.`
-            ]
-        },
-        {
-            iconSrc: innovationChangeIcon,
-            altIconText: "Clutch-e Bag Philosophy Innovation Change Icon",
-            content: [
-                `Innovation means to change.`,
-                `We strongly believe in a continuous metamorphosis of what surrounds us.`,
-                `We are deeply bound by our traditions though we turn our gaze to the future.`
-            ]
-        },
-        {
-            iconSrc: productQualityIcon,
-            altIconText: "Clutch-e Bag Philosophy Product Quality Icon",
-            content: [
-                `Our quality lies not only in the materials but also in the whole manufacturing process, in order to take care of every detail of our bags.`,
-                `Excellent products can be created only by the combination of masters craftsmen and the modern manufacturing techniques.`
-            ]
-        }
-
-    ];
-
     return (
         <>
             <div className="container">
