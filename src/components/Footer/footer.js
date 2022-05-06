@@ -10,7 +10,8 @@ const Footer = () => {
     ]
     const supportItems = [
         { itemName:"Contact", itemLink: "contact" },
-        { itemName:"Privacy & Cookie Policy", itemLink: "privacy" }
+        { itemName:"Privacy Policy", itemLink: "https://www.iubenda.com/privacy-policy/46303809" },
+        { itemName:"Cookie Policy", itemLink: "https://www.iubenda.com/privacy-policy/46303809/cookie-policy" },
     ]
 
     return(
@@ -41,7 +42,7 @@ const Footer = () => {
                     <div className="support-container">
                       <div className="main-menu-item title">Support</div>
                       {supportItems.map((item, i) =>
-                        <Link href={"/" + item.itemLink} key={i}>
+                        <Link href={item.itemLink} key={i}>
                             <div className="main-menu-item">{item.itemName}</div>
                         </Link>)}
                    </div>
