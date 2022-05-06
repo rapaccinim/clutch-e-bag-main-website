@@ -64,9 +64,10 @@ const MobileHeader = ({menuItems}) => {
             `}</style>
             <style jsx>{`
               .mobile-header-container{
-                    display: flex;
-                    justify-content: space-between;
-                    width: 100%;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 25px 0 0 0;
               }
               .mobile-header-item{
                 display: flex;
