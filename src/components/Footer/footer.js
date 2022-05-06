@@ -1,18 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "/public/assets/black-and-white-clutch-e-bag-fashion-tech-logo.svg";
-import instagramIcon from "/public/assets/iconmonstr-instagram-11.svg";
+import SocialItems from "./socialItems";
 
 const Footer = () => {
     const menuItems = [
         { itemName:"Home", itemLink: "" },
         { itemName:"Philosophy", itemLink: "philosophy" },
-
     ]
     const supportItems = [
-      { itemName:"Contact", itemLink: "contact" },
-        { itemName:"Faq", itemLink: "faq" },
-        { itemName:"Privacy and Cookie Policy", itemLink: "privacy" }
+        { itemName:"Contact", itemLink: "contact" },
+        { itemName:"Privacy & Cookie Policy", itemLink: "privacy" }
     ]
 
     return(
@@ -48,18 +46,7 @@ const Footer = () => {
                         </Link>)}
                    </div>
                   </div>
-                  <div className="follow-us-container">
-                    <div className="main-menu-item title">Follow Us</div>
-                     <a href="https://www.instagram.com/clutch_ebag/">
-                      <div className="instagram-container" style={{paddingLeft: 12.8+"px"}}>
-                        <Image
-                            src={instagramIcon}
-                            alt="Instagram icon clutch-e bag main website innovation fashion tech made in italy startup"
-                        />
-                        <p style={{paddingLeft: 0.5+"rem"}}>Instagram</p>
-                      </div>
-                    </a>
-                  </div>
+                     <SocialItems/>
                 </div>
                 <div className="footer-bottom">
                   <div>© 2022 Clutch-e Bag</div>
@@ -80,7 +67,7 @@ const Footer = () => {
               }
 
               .title{
-                font-family: Antic Didone;
+                font-family: Antic Didone, sans-serif;
                 font-size: 20px;
                 font-weight: 400;
               }
@@ -96,17 +83,6 @@ const Footer = () => {
                 padding: 0.8rem;
                 cursor: pointer;
                 font-weight: 300;
-              }
-
-              .follow-us-container{
-                margin-top: 1rem;
-              }
-
-              .instagram-container{
-                display: flex;
-                flex-direction: row;
-                font-weight: 300;
-                cursor: pointer;
               }
 
               a{
