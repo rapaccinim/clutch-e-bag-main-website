@@ -1,3 +1,7 @@
+# Version 1.4 (2022-05-06)
+## About
+* fixed mobile menu display issue (the logo was too near the mobile menu)
+
 # Version 1.3 (2022-05-06)
 ## About
 * added footer
