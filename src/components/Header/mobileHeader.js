@@ -93,7 +93,7 @@ const MobileHeader = ({menuItems}) => {
               cursor: pointer;
             }
             .menu-list{
-              top: 8vh;
+              top: 10vh;
               height: 100vh;
               width: 100vw;
               margin-bottom: 3rem;
