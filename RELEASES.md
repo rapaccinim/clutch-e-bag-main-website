@@ -1,3 +1,8 @@
+# Version 1.5 (2022-05-08)
+## About
+* added new cookie and privacy policies links to footer
+* added new Iubenda cookie banner script
+
 # Version 1.4 (2022-05-06)
 ## About
 * fixed mobile menu display issue (the logo was too near the mobile menu)
