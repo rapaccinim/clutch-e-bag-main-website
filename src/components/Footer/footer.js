@@ -10,8 +10,8 @@ const Footer = () => {
     ]
     const supportItems = [
         { itemName:"Contact", itemLink: "contact" },
-        { itemName:"Privacy Policy", itemLink: "https://www.iubenda.com/privacy-policy/46303809" },
-        { itemName:"Cookie Policy", itemLink: "https://www.iubenda.com/privacy-policy/46303809/cookie-policy" },
+        { itemName:"Privacy Policy", itemLink: "https://www.iubenda.com/privacy-policy/99081748" },
+        { itemName:"Cookie Policy", itemLink: "https://www.iubenda.com/privacy-policy/99081748/cookie-policy" },
     ]
 
     return(
