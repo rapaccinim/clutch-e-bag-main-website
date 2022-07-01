@@ -1,3 +1,7 @@
+# Version 1.6 (2022-06-30)
+## About
+* added mandatory Italian law reference in the footer
+
 # Version 1.5 (2022-05-08)
 ## About
 * added new cookie and privacy policies links to footer
