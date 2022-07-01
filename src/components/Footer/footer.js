@@ -53,6 +53,14 @@ const Footer = () => {
                   <div>© 2022 Clutch-e Bag</div>
                   <div>Made with ♥️ in Italy</div>
                 </div>
+                <div className="footer-bottom">
+                    <p>Obblighi informativi per le erogazioni pubbliche: gli aiuti di Stato e gli aiuti de minimis
+                        ricevuti dalla nostra impresa sono contenuti nel registro nazionale degli aiuti di Stato di cui
+                        all'art.52 della L.234/2012 a cui si rinvia e consultabili al
+                        <a href="https://www.rna.gov.it/RegistroNazionaleTrasparenza/faces/pages/TrasparenzaAiuto.jspx"> seguente link
+                        </a>.
+                    </p>
+                </div>
             </footer>
             <style jsx>{`
               footer{
@@ -97,6 +105,14 @@ const Footer = () => {
                 align-items: center;
                 padding: 2rem 5rem;
                 font-size: 14px;
+              }
+              .footer-bottom p{
+                font-size: 12px;
+              }
+              
+              .footer-bottom p a {
+                text-decoration: underline;
+                color: black;
               }
 
               @media (max-width: 768px) {
