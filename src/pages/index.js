@@ -12,7 +12,10 @@ import genuineLeatherPic from "/public/assets/more-info-pics/clutch-e-bag-fashio
 import fingerPrintIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-finger-print-scanner-icon.svg"
 import technologyIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-technology.svg"
 import genuineLeatherIcon from "/public/assets/more-info-icons/clutch-e-bag-fashion-tech-made-in-italy-leather.svg"
+import forbesLogo from "/public/assets/forbes-logo-media-tesitmonial-clutch-e-bag.webp"
+import marieClaireLogo from "/public/assets/marie-claire-logo-media-tesitmonial-clutch-e-bag.webp"
 import HeadSEO from "../components/Head/head";
+import Image from "next/image";
 
 const Home = () => {
     return (
@@ -169,115 +172,169 @@ const Home = () => {
                 </div>
 
             </section>
-
-            <style jsx>{`
-                .container-fluid {
-                  width: 100%;
-                }
-                .flex {
-                    display: flex;
-                }
-                .flex-col {
-                    flex-direction: column;
-                }
-                .flex-basis-50 {
-                    flex-basis: 50%;
-                }
-                .justify-content-center {
-                    justify-content: center;
-                }
-                .justify-content-evenly {
-                    justify-content: space-evenly;
-                }
-                .align-items-center {
-                    align-items: center;
-                }
-                .img-fluid {
-                    max-width: 100%;
-                }
-                h1, h2, h3, h4, h5, h6 {
-                    font-family: 'Antic Didone', sans-serif;
-                }
-                h1 {
-                    font-size: 70px;
-                }
-                h2 {
-                    font-size: 45px;
-                }
-                h3 {
-                    font-size: 30px;
-                    padding: 0 3rem;
-                }
-                p {
-                    font-size: 16px;
-                    font-family: 'Inter', sans-serif;
-                    font-weight: 300;
-                    line-height: 26px;
-                }
-                .py-2 {
-                    padding: 2rem 0;
-                }
-                .py-5 {
-                    padding: 5rem 0;
-                }
-                .px-5 {
-                    padding: 0 5rem;
-                }
-                .pl-3 {
-                    padding: 3rem;
-                }
-                .hero-section__description {
-                    padding: 5rem 3rem;
-                    align-items: start;
-                }
-                .feature__card:nth-child(2) {
-                    flex-direction: row-reverse;
-                }
-                .icon {
-                    width: 60px;
-                    height: 60px;
-                }
-                .text-center {
-                    text-align: center;
-                }
-                .anchor-link{
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    color: #000000;
-                }
-                @media screen and (max-width: 992px) {
-                    .feature__description {
-                        padding: 0;
-                    }
-                }
-                @media screen and (max-width: 768px) {
-                h3 {
+            <section className="public-relations" id="media-testimonials">
+                <h2 className="text-center py-5">Press coverage</h2>
+                <div className="testimonial-wrapper">
+                    <div className="testimonial-column">
+                        <a
+                            href="https://www.forbes.fr/mediasfrance/le-clutch-e-bag-le-sac-intelligent-moderne-et-elegant/"
+                            hrefLang="fr"
+                            target="_blank"
+                            className="testimonial-link"
+                        >
+                            <Image
+                                src={forbesLogo.src}
+                                width="200"
+                                height="100"
+                                alt="forbes testimonial clutch-e bag fashion tech"
+                            />
+                        </a>
+                    </div>
+                    <div className="testimonial-column">
+                        <a
+                            href="https://www.marieclaire.fr/adresses-incontournables/clutch-e-bag-la-pochette-connectee-made-in-italy/"
+                            hrefLang="fr"
+                            target="_blank"
+                            className="testimonial-link"
+                        >
+                            <Image
+                                src={marieClaireLogo.src}
+                                width="200"
+                                height="100"
+                                alt="marie claire testimonial clutch-e bag fashion tech"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <style jsx>{`
+            .container-fluid {
+              width: 100%;
+            }
+            .flex {
+                display: flex;
+            }
+            .flex-col {
+                flex-direction: column;
+            }
+            .flex-basis-50 {
+                flex-basis: 50%;
+            }
+            .justify-content-center {
+                justify-content: center;
+            }
+            .justify-content-evenly {
+                justify-content: space-evenly;
+            }
+            .align-items-center {
+                align-items: center;
+            }
+            .img-fluid {
+                max-width: 100%;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Antic Didone', sans-serif;
+            }
+            h1 {
+                font-size: 70px;
+            }
+            h2 {
+                font-size: 45px;
+            }
+            h3 {
+                font-size: 30px;
+                padding: 0 3rem;
+            }
+            p {
+                font-size: 16px;
+                font-family: 'Inter', sans-serif;
+                font-weight: 300;
+                line-height: 26px;
+            }
+            .py-2 {
+                padding: 2rem 0;
+            }
+            .py-5 {
+                padding: 5rem 0;
+            }
+            .px-5 {
+                padding: 0 5rem;
+            }
+            .pl-3 {
+                padding: 3rem;
+            }
+            .hero-section__description {
+                padding: 5rem 3rem;
+                align-items: start;
+            }
+            .feature__card:nth-child(2) {
+                flex-direction: row-reverse;
+            }
+            .icon {
+                width: 60px;
+                height: 60px;
+            }
+            .text-center {
+                text-align: center;
+            }
+            .anchor-link{
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #000000;
+            }
+            .testimonial-wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .testimonial-column {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+            }
+            .testimonial-link {
+                text-decoration: underline;
+                border-bottom: 1px solid #000;
+            }
+            @media screen and (max-width: 992px) {
+                .feature__description {
                     padding: 0;
                 }
-                 .pl-3 {
-                    padding: 0 0;
-                }
-                .py-5 {
-                    padding: 1rem 0;
-                }
-                  .hero-section {
-                    flex-direction: column;
-                  }
-                  .hero-section__description {
-                    padding: 2rem 0;
-                    align-items: start;
-                }
-                  .feature__card {
-                      flex-direction: column;
-                  }
-                  .features__icons {
-                      flex-direction: column;
-                  }
-                }
-                
-            `}</style>
-        </div>
+            }
+            @media screen and (max-width: 768px) {
+            h3 {
+                padding: 0;
+            }
+             .pl-3 {
+                padding: 0 0;
+            }
+            .py-5 {
+                padding: 1rem 0;
+            }
+              .hero-section {
+                flex-direction: column;
+              }
+              .hero-section__description {
+                padding: 2rem 0;
+                align-items: start;
+            }
+              .feature__card {
+                  flex-direction: column;
+              }
+              .features__icons {
+                  flex-direction: column;
+              }
+            .testimonial-wrapper {
+                flex-direction: column;
+            }
+            }
+        `}</style>
         </>
     )
 }
-export default Home
+export default Home;

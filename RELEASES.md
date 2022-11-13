@@ -1,3 +1,7 @@
+# Version 1.7 (2022-11-13)
+## About
+* added testimonial section with Forbes and Marie Claire article links
+
 # Version 1.6 (2022-06-30)
 ## About
 * added mandatory Italian law reference in the footer
