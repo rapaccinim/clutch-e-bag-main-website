@@ -176,20 +176,34 @@ const Home = () => {
                 <h2 className="text-center py-5">Press coverage</h2>
                 <div className="testimonial-wrapper">
                     <div className="testimonial-column">
-                        <Image
-                            src={forbesLogo.src}
-                            width="200"
-                            height="100"
-                            alt="forbes testimonial clutch-e bag fashion tech"
-                        />
+                        <a
+                            href="https://www.forbes.fr/mediasfrance/le-clutch-e-bag-le-sac-intelligent-moderne-et-elegant/"
+                            hrefLang="fr"
+                            target="_blank"
+                            className="testimonial-link"
+                        >
+                            <Image
+                                src={forbesLogo.src}
+                                width="200"
+                                height="100"
+                                alt="forbes testimonial clutch-e bag fashion tech"
+                            />
+                        </a>
                     </div>
                     <div className="testimonial-column">
-                        <Image
-                            src={marieClaireLogo.src}
-                            width="200"
-                            height="100"
-                            alt="marie claire testimonial clutch-e bag fashion tech"
-                        />
+                        <a
+                            href="https://www.marieclaire.fr/adresses-incontournables/clutch-e-bag-la-pochette-connectee-made-in-italy/"
+                            hrefLang="fr"
+                            target="_blank"
+                            className="testimonial-link"
+                        >
+                            <Image
+                                src={marieClaireLogo.src}
+                                width="200"
+                                height="100"
+                                alt="marie claire testimonial clutch-e bag fashion tech"
+                            />
+                        </a>
                     </div>
                 </div>
             </section>
@@ -281,6 +295,11 @@ const Home = () => {
                 flex: 1;
                 align-items: center;
                 justify-content: center;
+                padding: 2rem;
+            }
+            .testimonial-link {
+                text-decoration: underline;
+                border-bottom: 1px solid #000;
             }
             @media screen and (max-width: 992px) {
                 .feature__description {
@@ -310,6 +329,9 @@ const Home = () => {
               .features__icons {
                   flex-direction: column;
               }
+            .testimonial-wrapper {
+                flex-direction: column;
+            }
             }
         `}</style>
         </>
