@@ -8,6 +8,7 @@ import pic7 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-te
 import pic8 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-8.jpeg"
 import pic9 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-9.jpeg"
 import pic10 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-10.jpeg"
+import Script from 'next/script';
 
 import Image from "next/image";
 
@@ -19,6 +20,10 @@ const Gallery = () => {
 
     return (
         <>
+            <Script
+                src="https://player.vimeo.com/api/player.js"
+                strategy="lazyOnload"
+            />
             <div className="container">
                 <h1>Gallery</h1>
                 <div>
@@ -36,6 +41,15 @@ const Gallery = () => {
                             />
                         </div>)}
                 </div>
+                <div className="vimeo-container">
+                    <iframe
+                        className="vimeo"
+                        src="https://player.vimeo.com/video/771251451?h=dc09cc2ab7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                        title="Clutch-e Bag demo"></iframe>
+                </div>
             </div>
             <style jsx>{`
               .container{
@@ -44,6 +58,17 @@ const Gallery = () => {
               }
               .image-container{
                   padding: 0.5rem 1rem;
+              }
+              .vimeo-container{
+                padding: 45% 0 0 0;
+                position:relative;
+              }
+              .vimeo{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%
               }
             `}</style>
         </>
