@@ -3,6 +3,7 @@ import innovationChangeIcon from "/public/assets/philosophy-pics/clutch-e-bag-fa
 import productQualityIcon from "/public/assets/philosophy-pics/clutch-e-bag-fashion-tech-made-in-italy-philosophy-quality-product-icon.svg"
 import CustomSection from "../components/PhilosophyComponents/CustomSection";
 import { nanoid } from 'nanoid'
+import HeadSEO from "../components/Head/head";
 
 const philosophyContent = [
     {
@@ -36,6 +37,12 @@ const philosophyContent = [
 const Philosophy = () => {
     return (
         <>
+            <HeadSEO
+                title={"Clutch-e Bag - Philosophy"}
+                description={"FashionTech innovation Made in Italy"}
+                pageURL={"philosophy"}
+                imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
+            />
             <div className="container">
                 <h1>Philosophy</h1>
                 {philosophyContent.map(item =>

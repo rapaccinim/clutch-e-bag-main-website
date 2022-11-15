@@ -1,4 +1,5 @@
 import {useState} from "react";
+import HeadSEO from "../components/Head/head";
 
 const Contact = () => {
 
@@ -78,6 +79,12 @@ const Contact = () => {
 
     return (
         <>
+            <HeadSEO
+                title={"Clutch-e Bag - Contact us"}
+                description={"FashionTech innovation Made in Italy"}
+                pageURL={"contact"}
+                imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
+            />
             <div className="container">
                 <h1 className="accent-title page-title">Contact Us</h1>
                 <p>If you would like to contact us please use the form below.</p>

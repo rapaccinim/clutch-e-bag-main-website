@@ -18,6 +18,34 @@ import HeadSEO from "../components/Head/head";
 import Image from "next/image";
 
 const Home = () => {
+
+    const carouselItems = [
+        {
+            image: firstPic,
+            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 1`
+        },
+        {
+            image: secondPic,
+            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 2`
+        },
+        {
+            image: sidePinkPic,
+            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 3`
+        },
+        {
+            image: frontBluePic,
+            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 4`
+        },
+        {
+            image: sideWhitePic,
+            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 5`
+        },
+        {
+            image: frontBlackPic,
+            altText: `Clutch-e Bag smart pochette fashion tech carousel picture 6`
+        }
+    ];
+
     return (
         <>
             <HeadSEO
@@ -31,32 +59,7 @@ const Home = () => {
                 <div className="flex-basis-50">
                     <Carousel
                         sizeFull={true}
-                        items={[
-                            {
-                                image: firstPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 1`
-                            },
-                            {
-                                image: secondPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 2`
-                            },
-                            {
-                                image: sidePinkPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 3`
-                            },
-                            {
-                                image: frontBluePic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 4`
-                            },
-                            {
-                                image: sideWhitePic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 5`
-                            },
-                            {
-                                image: frontBlackPic,
-                                altText: `Clutch-e Bag smart pochette fashion tech carousel picture 6`
-                            }
-                        ]}
+                        items={carouselItems}
                     />
                 </div>
                 <div className="hero-section__description flex flex-col flex-basis-50">

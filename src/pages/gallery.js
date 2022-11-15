@@ -8,6 +8,7 @@ import pic9 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-te
 import pic10 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-10.jpeg"
 import Script from 'next/script';
 import Image from "next/image";
+import HeadSEO from "../components/Head/head";
 
 const Gallery = () => {
 
@@ -16,6 +17,12 @@ const Gallery = () => {
 
     return (
         <>
+            <HeadSEO
+                title={"Clutch-e Bag - Gallery"}
+                description={"FashionTech innovation Made in Italy"}
+                pageURL={"gallery"}
+                imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
+            />
             <Script
                 src="https://player.vimeo.com/api/player.js"
                 strategy="lazyOnload"
