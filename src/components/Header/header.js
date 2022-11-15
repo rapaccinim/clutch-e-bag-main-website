@@ -26,7 +26,8 @@ const Header = () => {
     const menuItems = [
         { itemName:"Home", itemLink: "" },
         { itemName:"Philosophy", itemLink: "philosophy" },
-        { itemName:"Contact", itemLink: "contact" }
+        { itemName:"Gallery", itemLink: "gallery" },
+        { itemName:"Contact", itemLink: "contact" },
     ]
 
     return (

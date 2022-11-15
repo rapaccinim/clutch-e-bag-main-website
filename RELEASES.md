@@ -1,3 +1,7 @@
+# Version 1.8 (2022-11-15)
+## About
+* added Gallery page
+
 # Version 1.7 (2022-11-13)
 ## About
 * added testimonial section with Forbes and Marie Claire article links
