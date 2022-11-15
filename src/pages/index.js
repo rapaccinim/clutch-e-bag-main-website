@@ -49,7 +49,7 @@ const Home = () => {
     return (
         <>
             <HeadSEO
-                title={"Clutch-e Bag"}
+                title={"Clutch-e Bag - Home"}
                 description={"FashionTech innovation Made in Italy"}
                 pageURL={"home"}
                 imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
