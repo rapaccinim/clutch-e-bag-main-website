@@ -4,8 +4,6 @@ import pic3 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-te
 import pic4 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-4.jpeg"
 import pic5 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-5.jpeg"
 import pic6 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-6.jpeg"
-import pic7 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-7.jpeg"
-import pic8 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-8.jpeg"
 import pic9 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-9.jpeg"
 import pic10 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-10.jpeg"
 import Script from 'next/script';
@@ -16,7 +14,7 @@ const Gallery = () => {
 
     const altText = "Clutch-e Bag fashion tech Made in Italy smart bags "
 
-    const galleryItems = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10];
+    const galleryItems = [pic1, pic2, pic3, pic4, pic5, pic6, pic9, pic10];
 
     return (
         <>
