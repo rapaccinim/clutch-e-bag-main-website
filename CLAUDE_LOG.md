@@ -2,6 +2,21 @@
 
 Append-only log of Claude Code sessions on this repo. Newest entry at the top. Each entry: date, goal, what changed, what was verified, what was left open.
 
+## 2026-10-13 (later) — Fix "module factory is not available" in `npm run dev`
+
+**Problem:** with Next 16.4.0 + Turbopack dev, `/`, `/philosophy` and `/gallery` crashed in the browser with `Module ... was instantiated ... but the module factory is not available` (first import of the page). `/contact` and `/404` were fine. Production build/`npm start` were never affected. An earlier note in this log/`CLAUDE.md` blamed a stale HMR cache; that was wrong.
+
+**Findings**
+- Reproducible on a clean `.next` and a fresh browser profile. The page's dev client chunk references modules (e.g. `Accordion`, `CustomSection`, image imports) that Turbopack never emits into any chunk.
+- Not the `/public/...` absolute import style (converting all to relative paths still failed), not styled-jsx, not `HeadSEO` props. Removing `HeadSEO` from the page avoided it, but a minimal page with `HeadSEO` + an image import worked, so no clean trigger found.
+- Same code: 16.4.0 fails, `16.5.0-canary.9` works, `next dev --webpack` on 16.4.0 works. (16.3.8 can't resolve the `/public/...` imports at all, so downgrading isn't an option without changing imports.)
+
+**Fix:** `"dev": "next dev --webpack"` in `package.json`. Next stays at 16.4.0, production build stays on Turbopack.
+
+**Verified:** clean `npm run dev`, every page loaded in headless Chrome: all 200 (404 for unknown route), no browser errors, home and philosophy render correctly.
+
+**Left open:** remove `--webpack` once a stable Next > 16.4.0 ships; re-verify all pages in a browser on a clean `.next`.
+
 ## 2026-10-13 — Modernize dependencies, remove dead code, add agent docs
 
 **Goal:** bump Node and dependencies, remove anything unused, document the repo for future agent sessions. Breaking the contact form was declared acceptable.

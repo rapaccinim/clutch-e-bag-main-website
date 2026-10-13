@@ -12,9 +12,10 @@ Static marketing site for Clutch-e Bag srl (first startup, no longer active), ke
 
 ## Commands
 - `npm install`
-- `npm run dev` — dev server. Writes/updates `AGENTS.md` (Next's own agent rules); commit it if it changes.
+- `npm run dev` — dev server, **runs on webpack** (`next dev --webpack`). Turbopack dev in Next 16.4.0 fails to emit page modules on `/`, `/philosophy`, `/gallery` ("module factory is not available" in the browser). Fixed in `16.5.0-canary.9`; drop `--webpack` once a stable release > 16.4.0 is out, and verify every page in a browser with a clean `.next`.
 - `npm run build` — the only automated check. Run it after every change.
-- `npm start` — serve the production build (better than `dev` for visual checks; `dev` HMR can show stale "module factory is not available" errors after edits — restart it).
+- `npm start` — serve the production build (Turbopack, works fine).
+- `AGENTS.md` is Next's own agent rules file, (re)written by `next dev`; commit it if it changes.
 
 ## Layout
 - `src/pages/_app.js` — wraps every page in `Layout` (Header + main + Footer).
