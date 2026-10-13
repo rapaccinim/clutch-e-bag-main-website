@@ -55,6 +55,19 @@ const Home = () => {
                 imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
             />
         <div className="container-fluid">
+            <section className="closure-banner text-center" aria-label="Company status">
+                <h2 className="closure-banner__title">Thank you</h2>
+                <p>
+                    Clutch-e Bag srl is no longer operating. The company was active from 2019 to 2025.
+                </p>
+                <p>
+                    Clutch-e Bag was the first smart pochette in the world, entirely Made in Italy.
+                </p>
+                <p>
+                    We thank everyone who believed in the project, our partners and our clients.
+                    It was an amazing startup experience.
+                </p>
+            </section>
             <section className="flex hero-section">
                 <div className="flex-basis-50">
                     <Carousel
@@ -304,6 +317,18 @@ const Home = () => {
                 text-decoration: underline;
                 border-bottom: 1px solid #000;
             }
+            .closure-banner {
+                border: 1px solid #000;
+                padding: 2rem 3rem;
+                margin-bottom: 3rem;
+            }
+            .closure-banner__title {
+                font-size: 30px;
+                margin: 0 0 1rem 0;
+            }
+            .closure-banner p:last-child {
+                margin-bottom: 0;
+            }
             @media screen and (max-width: 992px) {
                 .feature__description {
                     padding: 0;
@@ -334,6 +359,9 @@ const Home = () => {
               }
             .testimonial-wrapper {
                 flex-direction: column;
+            }
+            .closure-banner {
+                padding: 1.5rem 1rem;
             }
             }
         `}</style>

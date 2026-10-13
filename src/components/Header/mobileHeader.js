@@ -22,8 +22,8 @@ const MobileHeader = ({menuItems}) => {
                             <Image
                                 src={logo}
                                 alt="Homepage clutch-e bag main logo innovation fashion tech made in italy startup"
-                                width="70px"
-                                height="70px"
+                                width={70}
+                                height={70}
                             />
                         </div>
                     </Link>
@@ -32,8 +32,8 @@ const MobileHeader = ({menuItems}) => {
                     <Image
                         src={menuVisible ? menuCloser : menuOpener}
                         alt="Homepage clutch-e bag main logo innovation fashion tech made in italy startup"
-                        width="32px"
-                        height="32px"
+                        width={32}
+                        height={32}
                         onClick={handleMenuClick}
                     />
                 </div>

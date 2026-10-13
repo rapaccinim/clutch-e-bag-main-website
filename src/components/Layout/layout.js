@@ -18,6 +18,11 @@ const Layout = (props) => {
               * {
                 box-sizing: border-box;
               }
+              /* Next 13+ <Link> renders a real <a>; keep the pre-upgrade unstyled look */
+              a {
+                color: inherit;
+                text-decoration: none;
+              }
               main{
                 min-height: 100vh;
                 padding: 3rem 7rem;
