@@ -40,4 +40,4 @@ The footer says "This is a cookie-free website". Keep it true:
 ## Open items
 - Drop `--webpack` from the `dev` script once a stable Next > 16.4.0 ships (see Commands).
 - Optional: self-host fonts with `next/font` so no request goes to Google.
-- Optional: footer still says "© 2022 Clutch-e Bag" (banner says active 2019–2025); footer menu lacks Gallery. Left untouched, not requested.
+- Optional: footer menu lacks Gallery. Left untouched, not requested.

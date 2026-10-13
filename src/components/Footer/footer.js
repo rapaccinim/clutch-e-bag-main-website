@@ -38,7 +38,7 @@ const Footer = () => {
                      <SocialItems/>
                 </div>
                 <div className="footer-bottom">
-                  <div>© 2022 Clutch-e Bag</div>
+                  <div>© 2019–2025 Clutch-e Bag</div>
                   <div>This is a cookie-free website</div>
                   <div>Made with ♥️ in Italy</div>
                 </div>

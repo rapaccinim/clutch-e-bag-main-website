@@ -2,6 +2,10 @@
 
 Append-only log of Claude Code sessions on this repo. Newest entry at the top. Each entry: date, goal, what changed, what was verified, what was left open.
 
+## 2026-10-13 (later) — Footer copyright years
+
+- `src/components/Footer/footer.js`: "© 2022 Clutch-e Bag" → "© 2019–2025 Clutch-e Bag", matching the homepage closure banner. Removed the item from `CLAUDE.md` open items.
+
 ## 2026-10-13 (later) — Cookie-free site, contact page removed
 
 - Removed `src/pages/contact.js`, `src/pages/api/sendgrid.js` and the `@sendgrid/mail` dependency. Removed "Contact" from the header menu and the footer "Support" column (Contact was its only item). `/contact` and `/api/sendgrid` now 404.
