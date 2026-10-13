@@ -1,5 +1,10 @@
 # Version 2.0 (2026-10-13)
 ## About
+* added homepage banner: Clutch-e Bag srl is no longer operating (active 2019–2025, first smart pochette in the world, Made in Italy), with thanks to supporters, partners and clients
+* removed the contact page, its SendGrid API route and the `@sendgrid/mail` dependency
+* replaced the embedded Vimeo player in the Gallery with a link (the player set cookies)
+* added "This is a cookie-free website" to the footer
+* removed Iubenda cookie banner and the privacy/cookie policy links from the footer
 * upgraded to Next.js 16, React 19, Node 24; switched from yarn to npm
 * removed unused pages, components, assets and the `nanoid` dependency
 * added `CLAUDE.md` and `CLAUDE_LOG.md` for AI agent sessions

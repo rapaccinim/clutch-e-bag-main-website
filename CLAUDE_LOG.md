@@ -2,6 +2,26 @@
 
 Append-only log of Claude Code sessions on this repo. Newest entry at the top. Each entry: date, goal, what changed, what was verified, what was left open.
 
+## 2026-10-13 (later) — Cookie-free site, contact page removed
+
+- Removed `src/pages/contact.js`, `src/pages/api/sendgrid.js` and the `@sendgrid/mail` dependency. Removed "Contact" from the header menu and the footer "Support" column (Contact was its only item). `/contact` and `/api/sendgrid` now 404.
+- Added "This is a cookie-free website" to the footer bottom row.
+- Measured cookies per page with headless Chrome (fresh profile, read the `Cookies` sqlite DB): `/`, `/philosophy`, `/404` set none; `/gallery` got `__cf_bm` and `cf_clearance` on `.vimeo.com` from the embedded player. `dnt=1` did not stop them. Replaced the iframe with a link to `https://vimeo.com/771251451/dc09cc2ab7` (unlisted video page, checked 200). After: 0 cookies on every page.
+- Added a "Cookie-free rule" section to `CLAUDE.md` with the check procedure.
+- Verified: `npm run build` passes (routes `/`, `/404`, `/gallery`, `/philosophy`); gallery images and footer HTML checked.
+
+## 2026-10-13 (later) — Remove Iubenda and policy links
+
+- Removed the Iubenda cookie banner (inline `_iub` config + `cdn.iubenda.com` scripts) from `src/pages/_document.js`.
+- Removed the "Privacy Policy" and "Cookie Policy" footer links (they pointed to Iubenda-hosted pages; there were no local policy pages). Footer "Support" column now only has "Contact".
+- Requested by the owner. Note: the contact form still collects name/email/phone, and Google Fonts are loaded from Google's servers; both normally require a privacy policy under GDPR. Owner's decision.
+- Verified: `npm run build` passes; no `iubenda` in the rendered HTML; footer screenshot checked.
+
+## 2026-10-13 (later) — Homepage closure banner
+
+- Added a bordered "Thank you" banner as the first section of `src/pages/index.js`: Clutch-e Bag srl is no longer operating, active 2019–2025, the first smart pochette in the world entirely Made in Italy, thanks to everyone who believed in the project, partners and clients, "an amazing startup experience". Styles are in the page's `<style jsx>` (`.closure-banner*`), with a mobile padding override.
+- Verified: `npm run build` passes; production server screenshots at 1440px and 390px.
+
 ## 2026-10-13 (later) — Fix "module factory is not available" in `npm run dev`
 
 **Problem:** with Next 16.4.0 + Turbopack dev, `/`, `/philosophy` and `/gallery` crashed in the browser with `Module ... was instantiated ... but the module factory is not available` (first import of the page). `/contact` and `/404` were fine. Production build/`npm start` were never affected. An earlier note in this log/`CLAUDE.md` blamed a stale HMR cache; that was wrong.

@@ -8,11 +8,6 @@ const Footer = () => {
         { itemName:"Home", itemLink: "" },
         { itemName:"Philosophy", itemLink: "philosophy" },
     ]
-    const supportItems = [
-        { itemName:"Contact", itemLink: "contact" },
-        { itemName:"Privacy Policy", itemLink: "https://www.iubenda.com/privacy-policy/99081748" },
-        { itemName:"Cookie Policy", itemLink: "https://www.iubenda.com/privacy-policy/99081748/cookie-policy" },
-    ]
 
     return(
         <>
@@ -39,18 +34,12 @@ const Footer = () => {
                             <div className="main-menu-item">{item.itemName}</div>
                         </Link>)}
                     </div>
-                    <div className="support-container">
-                      <div className="main-menu-item title">Support</div>
-                      {supportItems.map((item, i) =>
-                        <Link href={item.itemLink} key={i}>
-                            <div className="main-menu-item">{item.itemName}</div>
-                        </Link>)}
-                   </div>
                   </div>
                      <SocialItems/>
                 </div>
                 <div className="footer-bottom">
                   <div>© 2022 Clutch-e Bag</div>
+                  <div>This is a cookie-free website</div>
                   <div>Made with ♥️ in Italy</div>
                 </div>
                 <div className="footer-bottom">

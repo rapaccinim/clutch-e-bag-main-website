@@ -19,9 +19,9 @@ Static marketing site for Clutch-e Bag srl (first startup, no longer active), ke
 
 ## Layout
 - `src/pages/_app.js` — wraps every page in `Layout` (Header + main + Footer).
-- `src/pages/_document.js` — Google Fonts (Inter, Antic Didone) + Iubenda cookie banner script (legal requirement, keep it).
-- Pages: `index.js` (home: carousel, features, accordions, press), `philosophy.js`, `gallery.js` (images + Vimeo iframe), `contact.js` (form), `404.js`.
-- `src/pages/api/sendgrid.js` — contact form backend; needs `SENDGRID_API_KEY` env var. Without it the form fails; that is accepted.
+- `src/pages/_document.js` — Google Fonts (Inter, Antic Didone). No cookie banner and no privacy/cookie policy links: Iubenda was removed on purpose (2026-10-13).
+- Pages: `index.js` (home: closure banner "no longer operating, 2019–2025" at the top, then carousel, features, accordions, press), `philosophy.js`, `gallery.js` (images + plain link to the Vimeo demo, no embed), `404.js`. (`contact.js` and the SendGrid API route were removed on 2026-10-13.)
+- Navigation: header menu = Home, Philosophy, Gallery; footer menu = Home, Philosophy. No contact page, no forms, no API routes.
 - `src/components/` — Header (desktop/mobile switch via `window.innerWidth` in `useEffect`, so the header is client-rendered only), Footer, Menu, Carousel, Accordion, Head (SEO meta), PhilosophyComponents.
 - `public/assets/` — every file there is referenced by code (imported statically or used as the `og:image` path). Check with grep before adding/removing.
 
@@ -30,5 +30,14 @@ Static marketing site for Clutch-e Bag srl (first startup, no longer active), ke
 - `next/link` renders a real `<a>`; `layout.js` has a global `a { color: inherit; text-decoration: none; }` to keep the original look.
 - Images are imported with absolute `/public/...` paths — works, leave as is.
 
-## Contact form
-- `src/pages/api/sendgrid.js` sends a **plain-text** email (no HTML) so user input never needs escaping, and it does not log the request body. Keep it that way.
+## Cookie-free rule
+The footer says "This is a cookie-free website". Keep it true:
+- No analytics, cookie banners, tracking pixels, or third-party embeds (iframes, players, widgets). The Vimeo demo is a plain link for this reason: the Vimeo player sets Cloudflare cookies (`__cf_bm`, `cf_clearance`) even with `dnt=1`.
+- No server-side cookies, no forms that collect personal data.
+- Check after changes: build, `npm start`, load each page in `google-chrome --headless=new --user-data-dir=<fresh dir> --virtual-time-budget=15000 --dump-dom <url>`, then `select host_key, name from cookies` on `<dir>/Default/Cookies` (sqlite) must return nothing.
+- Google Fonts (`_document.js`) set no cookies, but still send visitors' IPs to Google. Self-hosting with `next/font` would remove that.
+
+## Open items
+- Drop `--webpack` from the `dev` script once a stable Next > 16.4.0 ships (see Commands).
+- Optional: self-host fonts with `next/font` so no request goes to Google.
+- Optional: footer still says "© 2022 Clutch-e Bag" (banner says active 2019–2025); footer menu lacks Gallery. Left untouched, not requested.

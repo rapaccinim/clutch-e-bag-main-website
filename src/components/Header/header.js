@@ -27,7 +27,6 @@ const Header = () => {
         { itemName:"Home", itemLink: "" },
         { itemName:"Philosophy", itemLink: "philosophy" },
         { itemName:"Gallery", itemLink: "gallery" },
-        { itemName:"Contact", itemLink: "contact" },
     ]
 
     return (
