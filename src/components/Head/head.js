@@ -2,7 +2,7 @@ import Head from "next/head";
 
 const HeadSEO = ({title, description, pageURL, imageURL}) => {
     const productionURL = `https://www.clutchebag.com/`
-    const ogURL = productionURL + pageURL === 'home' ? '' : pageURL
+    const ogURL = productionURL + (pageURL === 'home' ? '' : pageURL)
     const ogImageURL = productionURL + imageURL
     return (
         <Head>

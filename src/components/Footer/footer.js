@@ -24,8 +24,8 @@ const Footer = () => {
                             <Image
                                 src={logo}
                                 alt="Homepage clutch-e bag main logo innovation fashion tech made in italy startup"
-                                width="70px"
-                                height="70px"
+                                width={70}
+                                height={70}
                                 style={{cursor: "pointer"}}
                             />
                         </div>

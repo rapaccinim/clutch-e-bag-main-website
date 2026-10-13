@@ -17,9 +17,9 @@ const Header = () => {
 
     useEffect(() => {
         setResponsiveness();
-        window.addEventListener("resize", () => setResponsiveness());
+        window.addEventListener("resize", setResponsiveness);
         return () => {
-            window.removeEventListener("resize", () => setResponsiveness());
+            window.removeEventListener("resize", setResponsiveness);
         }
     }, []);
 
@@ -42,8 +42,8 @@ const Header = () => {
                                     <Image
                                         src={logo}
                                         alt="Homepage clutch-e bag main logo innovation fashion tech made in italy startup"
-                                        width="70px"
-                                        height="70px"
+                                        width={70}
+                                        height={70}
                                     />
                                 </div>
                             </Link>

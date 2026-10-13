@@ -4,16 +4,14 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function sendEmail(req, res) {
     try {
-        console.log("REQ.BODY", req.body);
+        // Plain text on purpose: user input is never rendered as HTML, so nothing to escape.
         await sendgrid.send({
             to: "info@clutchebag.com",
             from: "info@clutchebag.com",
             subject: "New email from Clutch-e Bag website contact page",
-            html: `<div>
-                        <p>You've got a new mail from ${req.body.name} ${req.body.email}</p>
-                        <p>Phone (optional): ${req.body.phone}</p>
-                        <p>${req.body.message}</p>
-                    </div>`,
+            text: `You've got a new mail from ${req.body.name} ${req.body.email}\n\n` +
+                `Phone (optional): ${req.body.phone}\n\n` +
+                `${req.body.message}`,
         });
     } catch (error) {
         return res.status(error.statusCode || 500).json({ error: error.message });

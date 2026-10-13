@@ -1,3 +1,9 @@
+# Version 2.0 (2026-10-13)
+## About
+* upgraded to Next.js 16, React 19, Node 24; switched from yarn to npm
+* removed unused pages, components, assets and the `nanoid` dependency
+* added `CLAUDE.md` and `CLAUDE_LOG.md` for AI agent sessions
+
 # Version 1.8 (2022-11-15)
 ## About
 * added Gallery page

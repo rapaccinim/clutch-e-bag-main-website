@@ -6,7 +6,6 @@ import pic5 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-te
 import pic6 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-6.jpeg"
 import pic9 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-9.jpeg"
 import pic10 from "/public/assets/gallery/clutch-e-bag-gallery-picture-fashion-tech-10.jpeg"
-import Script from 'next/script';
 import Image from "next/image";
 import HeadSEO from "../components/Head/head";
 
@@ -23,10 +22,6 @@ const Gallery = () => {
                 pageURL={"gallery"}
                 imageURL={"assets/clutch-e-bag-fashion-tech-made-in-italy-home-pic-min.jpg"}
             />
-            <Script
-                src="https://player.vimeo.com/api/player.js"
-                strategy="lazyOnload"
-            />
             <div className="container">
                 <h1>Gallery</h1>
                 <div>
@@ -40,7 +35,7 @@ const Gallery = () => {
                                 alt={`${altText + key}`}
                                 width="1920"
                                 height="1080"
-                                objectFit='cover'
+                                style={{ maxWidth: '100%', height: 'auto' }}
                             />
                         </div>)
                     }
